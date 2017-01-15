@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106022328) do
+ActiveRecord::Schema.define(version: 20170115045322) do
+
+  create_table "equipment", force: :cascade do |t|
+    t.string   "nombre"
+    t.integer  "cantidad"
+    t.integer  "tiempo"
+    t.integer  "potencia"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "nombre"
